@@ -33,7 +33,7 @@ class SidebarManager {
     const items = [
       { path: '../Dashboard/dashboard.html', target: 'dashboard', label: 'Dashboard' },
       { path: '../paginaGestaoDeProdutos/gestaoProd.html', target: 'gestaoProd', label: 'Gestão de produtos' },
-      { path: '../paginapedidos/pedidos.html', target: 'pedidos', label: 'Pedidos' },
+      { path: '../paginaPedidos/pedidos.html', target: 'pedidos', label: 'Pedidos' },
       { path: '../paginaGestaoDeEstoque/gestaoDeEstoque.html', target: 'gestaoDeEstoque', label: 'Gestão de estoque' },
       { path: '../paginaderelatorios/relatorios.html', target: 'relatorios', label: 'Relatórios' },
       { path: '../ConfiguracaoConta/config-conta.html', target: 'config-conta', label: 'Configurações' },
