@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMaster - Relatórios</title>
+    <link rel="stylesheet" href="../Global/style.css">
+    <link rel="stylesheet" href="relatorios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+
+<body>
+    <button id="menuToggle" class="mobile-menu-toggle" aria-label="Abrir menu">
+        <span class="menu-icon">☰</span>
+        <span class="close-icon" style="display: none;">×</span>
+    </button>
+
+    <div class="sidebar-overlay"></div>
+
+    <div class="main-content">
+        <h1 class="page-title">Relatórios</h1>
+
+        <div class="report-section">
+            <h2 class="section-title">Emitir relatórios</h2>
+
+            <div class="report-options">
+                <div class="report-card" id="openGraphicReportModal"> <img src="images/grafico.png" alt="Gráfico"
+                        class="report-icon">
+                    <div class="card-tooltip">Relatório Gráfico</div>
+                </div>
+
+                <div class="report-card">
+                    <img src="images/planilha.png" alt="Planilha" class="report-icon">
+                    <div class="card-tooltip">Gerar planilha</div>
+                </div>
+
+                <div class="report-card">
+                    <img src="images/l2.png" alt="Lista" class="report-icon">
+                    <div class="card-tooltip">Lista de Produtos</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="../Dashboard/dashboard.html" class="back-button">
+            <span class="back-icon">←</span> Voltar
+        </a>
+    </div>
+
+    <div id="graphicReportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 class="modal-title">Relatório de vendas</h2>
+            <div class="modal-body">
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item"><span style="background-color:#ffc107;"></span>5 unidades</div>
+                <div class="legend-item"><span style="background-color:#ffaa00;"></span>10 unidades</div>
+                <div class="legend-item"><span style="background-color:#ffeb3b;"></span>15 unidades</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Global/sidebar.js"></script>
+    <script src="relatorios.js"></script>
+</body>
+
+</html>

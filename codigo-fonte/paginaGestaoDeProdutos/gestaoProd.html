@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de produtos</title>
+    <link rel="stylesheet" href="gestaoProd.css">
+    <link rel="stylesheet" href="../Global/style.css">
+</head>
+
+<body>
+    <!-- Botão de Toggle Mobile -->
+    <button id="menuToggle" class="mobile-menu-toggle" aria-label="Abrir menu">
+        <span class="menu-icon">☰</span>
+        <span class="close-icon" style="display: none;">×</span>
+    </button>
+
+    <!-- Overlay para Mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Gestão de produtos</h1>
+
+            <div class="action-buttons">
+                <button class="btn btn-secondary">Novo produto</button> <!-- modificação para botão "Novo produto" ficar igual aos demais -->
+                <button class="btn btn-secondary">Clique no produto para editar</button>
+                <button class="btn btn-secondary">Gerenciar lotes</button>
+                <a href="../Dashboard/dashboard.html" class="back-button">← Voltar</a>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nome do produto:</label>
+                    <input type="text" name="nome" class="form-control" placeholder="Insira nome do produto">
+                </div>
+                <div class="form-group">
+                    <label>Categoria:</label>
+                    <input type="text" name="categoria" class="form-control"
+                        placeholder="Refrigerante, cerveja, destilado, energético...">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Lote:</label>
+                    <input type="text" name="lote" class="form-control" placeholder="Número de lote">
+                </div>
+                <div class="form-group">
+                    <label>Validade:</label>
+                    <input type="text" name="validade" class="form-control" placeholder="Vencimento do lote">
+                </div>
+                <div class="form-group">
+                    <label>Quantidade de entrada:</label>
+                    <input type="text" name="quantidade" class="form-control"
+                        placeholder="Quantos itens estão entrando no es...">
+                </div>
+            </div>
+
+
+            <div class="form-actions">
+                <button class="btn btn-save">Salvar</button>
+                <button class="btn btn-cancel">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="inventory-section">
+            <h2>Itens em estoque</h2>
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>CATEGORIA</th>
+                        <th>LOTE</th>
+                        <th>VALIDADE</th>
+                        <th>QUANTIDADE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coca-cola 350ml</td>
+                        <td>Refrigerantes</td>
+                        <td>12345</td>
+                        <td>25/07/2026</td>
+                        <td>57</td>
+                    </tr>
+                    <tr>
+                        <td>Coca-cola 1L</td>
+                        <td>Refrigerantes</td>
+                        <td>44466</td>
+                        <td>31/10/2026</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Del Valle 1L</td>
+                        <td>Sucos</td>
+                        <td>95148</td>
+                        <td>17/09/2025</td>
+                        <td class="quantity-alert">10 ⚠️</td>
+                    </tr>
+                    <tr>
+                        <td>Red Bull 250ml</td>
+                        <td>Energéticos</td>
+                        <td>87463</td>
+                        <td>25/04/2025</td>
+                        <td class="quantity-alert">5 ⚠️</td>
+                    </tr>
+                    <tr>
+                        <td>Red Bull 473ml</td>
+                        <td>Energéticos</td>
+                        <td>51287</td>
+                        <td>03/07/2025</td>
+                        <td>82</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../Global/sidebar.js"></script>
+    <script src="gestaoProd.js"></script>
+</body>
+
+</html>

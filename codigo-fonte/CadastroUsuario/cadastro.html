@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master - Criar Conta</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <div class="register-container">
+        <div class="header">
+            <img src="../Global/logo.png" alt="Logo StockMaster" class="register-logo"> 
+            <h1 class="section-title">Criar uma nova conta</h1> <!-- Mudei para h1 por semântica -->
+        </div>
+        
+        <form class="register-form" id="registerForm"> <!-- Adicionei ID para seleção mais segura -->
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="name">Nome ou Razão Social:*</label>
+                    <input type="text" id="name" placeholder="Insira nome completo ou razão social" required>
+                </div>
+                
+                <div class="form-group half">
+                    <label for="document">CPF/CNPJ:</label>
+                    <input type="text" id="document" placeholder="00.000.000/0000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="email">E-mail:*</label>
+                    <input type="email" id="email" placeholder="Insira seu e-mail" required>
+                </div>
+                
+                <div class="form-group half">
+                    <label for="whatsapp">Nº de WhatsApp:</label>
+                    <input type="tel" id="whatsapp" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{5}-\d{4}">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="password">Digite uma senha:*</label>
+                    <input type="password" id="password" placeholder="****" required minlength="6">
+                </div>
+                
+                <div class="form-group half">
+                    <label for="confirm-password">Confirme sua senha:*</label>
+                    <input type="password" id="confirm-password" placeholder="****" required minlength="6">
+                </div>
+            </div>
+            
+            <div class="terms-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Declaro ter lido e aceitado os termos e políticas de serviço</label>
+            </div>
+            
+            <button type="submit" class="register-button">Criar conta</button>
+        </form>
+    </div>
+    <script src="cadastro.js"></script>
+</body>
+</html>

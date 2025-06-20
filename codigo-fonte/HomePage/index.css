@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "AvenirNextProRegular";
+    src: url(../Global/fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "CalibriLight";
+    src: url(../Global/fonts/calibril.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'CalibriLight';
+    font-size: 20px;
+}
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+}
+
+.external-logo {
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    text-align: center;
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+}
+
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'AvenirNextProRegular', sans-serif;
+    font-size: 24px;
+    color: #005a51;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'AvenirNextProRegular', sans-serif;
+    font-size: 20px;
+    color: #34495e;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'CalibriLight', sans-serif;
+    font-size: 20px;
+    color: #2c3e50;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+
+.form-group input::placeholder {
+    color: #95a5a6;
+    font-family: 'CalibriLight', sans-serif;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 25px;
+    font-family: 'CalibriLight', sans-serif;
+    font-size: 18px;
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #27ae60;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'AvenirNextProRegular', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #219653;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.create-account {
+    text-align: center;
+}
+
+.create-account-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #f8f8f8;
+    color: #2c3e50;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'AvenirNextProRegular', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.create-account-button:hover {
+    background-color: #f0f0f0;
+    border-color: #bdc3c7;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .login-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+
+    .logo-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .external-logo {
+        max-width: 200px;
+    }
+}

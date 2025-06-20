@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pedidos.css">
+    <link rel="stylesheet" href="../Global/style.css"> <!-- CSS compartilhado -->
+    <link rel="stylesheet" href="config-conta.css"> <!-- CSS específico -->
+    <script src="pedidos.js" defer></script>
+</head>
+
+<body>
+    Botão de Toggle Mobile
+    <button id="menuToggle" class="mobile-menu-toggle" aria-label="Abrir menu">
+        <span class="menu-icon">☰</span>
+        <span class="close-icon" style="display: none;">×</span>
+    </button>
+
+    <!-- Overlay para Mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <div class="main-content">
+        <div class="header">
+            <h2>Pedidos</h2>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-button" id="btn-novo-pedido">Novo pedido</button>
+            <button class="action-button" id="btn-editar">Editar</button>
+            <button class="action-button" id="btn-gerenciar">Gerenciar pedidos</button>
+            <a href="../Dashboard/dashboard.html" class="back-button">← Voltar</a>
+        </div>
+
+        <div class="form-container" id="form-pedido">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nome do produto:</label>
+                    <input type="text" id="nome-produto" placeholder="Insira nome do produto">
+                </div>
+                <div class="form-group">
+                    <label>Categoria:</label>
+                    <input type="text" id="categoria" placeholder="Refrigerante, cerveja,...">
+                </div>
+                <div class="form-group">
+                    <label>Fornecedor:</label>
+                    <input type="text" id="fornecedor" placeholder="Nome do fornecedor">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Data de entrada:</label>
+                    <input type="text" id="data-entrada" placeholder="DD/MM/AAAA">
+                </div>
+                <div class="form-group">
+                    <label>Quantidade:</label>
+                    <input type="number" id="quantidade" placeholder="Insira a quantidade">
+                </div>
+                <div class="form-group">
+                    <label>Valor unitário de compra:</label>
+                    <input type="text" id="valor-unitario" placeholder="Valor de compra por item">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-save" id="btn-salvar">Salvar</button>
+                <button class="btn-cancel" id="btn-cancelar">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="orders-section">
+            <h3>Pedidos entregues</h3>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>CATEGORIA</th>
+                        <th>FORNECEDOR</th>
+                        <th>VALOR UNITÁRIO DE COMPRA</th>
+                        <th>QUANTIDADE</th>
+                        <th>DATA DE ENTRADA</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table-body">
+                    <!-- Dados da tabela serão inseridos via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">Pedido salvo com sucesso!</div>
+    <script src="../Global/sidebar.js"></script>
+</body>
+
+</html>

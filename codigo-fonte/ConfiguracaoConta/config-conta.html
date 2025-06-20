@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações da conta</title>
+    <link rel="stylesheet" href="config-conta.css"> <!-- CSS específico -->
+    <link rel="stylesheet" href="../Global/style.css"> <!-- CSS compartilhado -->
+</head>
+
+<body>
+    <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+
+    <div class="content">
+        <h1>Configurações de conta</h1>
+
+        <div class="settings-form">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Insira seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Nome de usuário:</label>
+                    <input type="text" id="username" placeholder="Insira seu nome de usuário">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Notificações</h2>
+
+                <div class="notification-option">
+                    <input type="checkbox" id="email-notifications">
+                    <label for="email-notifications">Receber notificações por email</label>
+                </div>
+
+                <div class="notification-option">
+                    <input type="checkbox" id="sms-notifications">
+                    <label for="sms-notifications">Receber notificações por SMS</label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary">Salvar configurações</button>
+
+            <a href="../Dashboard/dashboard.html">
+                <div class="tooltip">
+                    <button class="btn btn-secondary">
+                        <span class="back-icon">←</span>Voltar
+                    </button>
+                    <span class="tooltip-text">Voltar ao menu Dashboard</span>
+                </div>
+            </a>
+
+            <button class="btn btn-danger">Excluir conta</button>
+        </div>
+    </div>
+    <script src="../Global/sidebar.js"></script>
+    <script src="config-conta.js"></script>
+</body>
+
+</html>

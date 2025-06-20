@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMaster - Login</title>
+    <link rel="stylesheet" href="../Global/style.css"> <!-- CSS compartilhado -->
+    <link rel="stylesheet" href="index.css"> <!-- CSS específico -->
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="logo-container">
+            <img src="../Global/logo.png" alt="Logo StockMaster" class="external-logo">
+        </div>
+        
+        <div class="login-container">
+            <div class="header">
+                <h2 class="section-title">Acesse sua conta</h2>
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label for="email">E-mail ou usuário:</label>
+                    <input type="text" id="email" placeholder="Insira seu nome de usuário ou e-mail">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Insira sua senha">
+                </div>
+                
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+                
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+            
+            <div class="divider"></div>
+            
+            <div class="create-account">
+                <a href="../CadastroUsuario/cadastro.html" class="create-account-button">Criar nova conta</a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

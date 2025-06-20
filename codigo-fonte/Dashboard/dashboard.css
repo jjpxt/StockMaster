@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "AvenirNextProRegular";
+    src: url(../Global/fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "CalibriLight";
+    src: url(../Global/fonts/calibril.ttf);
+}
+
+/*ALTERAÇÃO FONTS*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CalibriLight';
+    font-size: 20px;
+}
+
+body {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-right: 150px;
+}
+
+h1 {
+    color: #005555;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#gap {
+    margin-bottom: 60px;
+    margin-top: 20px;
+    font-family: 'AvenirNextProRegular';
+}
+
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+        "cards chart"
+        "menu chart";
+    grid-gap: 20px;
+}
+
+.cards-container {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    font-family: 'AvenirNextProRegular';
+}
+
+.card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 15px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: normal;
+    font-family: 'AvenirNextProRegular';
+}
+
+.card .number {
+    font-size: 42px;
+    font-weight: bold;
+    color: #00a3a3;
+    font-family: 'AvenirNextProRegular';
+}
+
+.card .names {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'AvenirNextProRegular';
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.menu-icon-dashboard {
+    background-color: #006666;
+    color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    background-color: #008080;
+}
+
+.menu-icon i {
+    font-size: 24px;
+}
+
+.menu-label {
+    position: absolute;
+    bottom: -35px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+}
+
+.apaga {
+    text-decoration: none;
+}
+
+#ico {
+    font-size: 25px;
+}
+
+.menu-item:hover .menu-label {
+    display: block;
+}
+
+.chart-container {
+    grid-area: chart;
+    width: 420px;
+    height: 600px;
+    margin-left: 50px;
+    background-color: #D4dddc;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'AvenirNextProRegular';
+}
+
+.chart-title {
+    font-size: 25px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'AvenirNextProRegular';
+}
+
+.chart-box {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    height: calc(100% - 60px);
+    position: relative;
+    max-height: 480px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    margin-right: 5px;
+}
+
+.chart-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: center;
+
+}
+
+#salesChart {
+    width: 100%;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cards"
+            "menu"
+            "chart";
+    }
+}
+
+/* Adicionar estilos para cards clicáveis */
+.card.clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card.clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.card.clickable:active {
+    transform: translateY(-2px);
+}

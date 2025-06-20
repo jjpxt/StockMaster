@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "AvenirNextProRegular";
+    src: url(../Global/fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "CalibriLight";
+    src: url(../Global/fonts/calibril.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CalibriLight';
+    font-size: 20px;
+    align-items: left;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    color: #0b5345;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #0b5345;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+
+.menu-item {
+    padding: 15px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+}
+
+.menu-item.active {
+    background-color: #0b5345;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-left: 75px;
+}
+
+.header {
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.header h2 {
+    color: #0a5c5c;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'AvenirNextProRegular';
+    font-weight: bolder;
+}
+
+
+.back-button {
+    background-color: #0a7c7c;
+    color: white;
+    border: 1px solid #0a7c7c;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 22%;
+    display: inline-block;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+}
+
+.action-button {
+    padding: 10px 20px;
+    border: 1px solid #0a7c7c;
+    background-color: white;
+    color: #0a7c7c;
+    border: 1px solid #0a7c7c;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;    
+    width: 25%;
+    display: inline-block;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    /*font-weight: bold;*/
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-save {
+    background-color: white;
+    color: #0b5345;
+    border: 1px solid #0b5345;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    /*font-weight: bold;*/
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    /*font-weight: bold;*/
+}
+
+.orders-section {
+    background-color: #e0f2f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.orders-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'AvenirNextProRegular';
+    font-weight: bolder;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #cce5e5;
+}
+
+.orders-table th {
+    background-color: #cce5e5;
+    padding: 12px;
+    text-align: left;
+    color: #0b5345;
+    font-weight: bold;
+    border-right: 1px dotted #aaa;
+}
+
+.orders-table td {
+    padding: 12px;
+    border-top: 1px dotted #aaa;
+    border-right: 1px dotted #aaa;
+}
+
+.orders-table tr:nth-child(even) {
+    background-color: #e0f2f1;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card.clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.card.clickable:active {
+    transform: translateY(-2px);
+}

@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "AvenirNextProRegular";
+    src: url(../Global/fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "CalibriLight";
+    src: url(../Global/fonts/calibril.ttf);
+}
+
+
+
+
+/*Config-Conta*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CalibriLight';
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.logo img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-item {
+    padding: 15px 0;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-item.active {
+    background-color: #006666;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.settings-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section {
+    background-color: #eaeaea;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0a5c5c;
+    text-align: center;
+    font-family: 'AvenirNextProRegular';
+    font-weight: bolder;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    width: 180px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.form-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.notification-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.notification-option label {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'AvenirNextProRegular';
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #006666;
+    border: 2px solid #006666;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: #006666;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #005555;
+}
+
+.btn-danger {
+    background-color: white;
+    color: #d9534f;
+    border: 2px solid #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #fff0f0;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-icon {
+    margin-right: 10px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+
+    .content {
+        flex: 1;
+        padding: 40px;
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form-section {
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 12px;
+    }
+}
