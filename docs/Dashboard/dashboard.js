@@ -53,7 +53,7 @@ function redirectToProducts() {
 }
 
 function redirectToPedidos() {
-    window.location.href = '../paginaPedidos/Pedidos.html';
+    window.location.href = '../paginaPedidos/pedidos.html';
 }
 
 function redirectToEstoque() {
