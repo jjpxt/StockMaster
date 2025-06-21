@@ -9,6 +9,10 @@ permissions:
   pages: write
   id-token: write
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
       - name: Clona o repositório
         uses: actions/checkout@v4
 
-      - name: Verifica estrutura
+      - name: Verifica estrutura do repositório
         run: ls -R ${{ github.workspace }}
 
       - name: Cria pasta de build
