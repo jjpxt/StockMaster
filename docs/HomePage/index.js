@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.querySelector('form');
     const loginInput = document.getElementById('email'); // Mudamos o ID para 'login' no HTML
     const passwordInput = document.getElementById('password');
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const login = loginInput.value.trim();
         const password = passwordInput.value.trim();
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Verifica a senha
         const decryptedPassword = decryptPassword(user.password);
-        
+
         if (decryptedPassword === password) {
             // Login bem-sucedido
             localStorage.setItem('currentUser', JSON.stringify({
@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: user.name,
                 loggedIn: true
             }));
-            
-            alert(`Bem-vindo, ${user.name}!`);
-            window.location.href = '../Dashboard/dashboard.html';
+
+            // alert(`Bem-vindo, ${user.name}!`);
+            window.location.href = '../PaginaInicial/inicial.html';
         } else {
             alert('Senha incorreta!');
         }
