@@ -17,14 +17,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verifica estrutura do repositório
-        run: ls -R
+        run: ls -R ${{ github.workspace }}
 
       - name: Cria pasta de build
         run: |
-          mkdir deploy
-          cp -r ./HomePage/* ./deploy/
-          cp -r ./Global ./deploy/
-          # Se tiver outras pastas ou arquivos (como imagens, libs etc.), copia aqui também
+          mkdir ${{ github.workspace }}/deploy
+          cp -r ${{ github.workspace }}/STOCKMASTER/HomePage/* ${{ github.workspace }}/deploy/
+          cp -r ${{ github.workspace }}/STOCKMASTER/Global ${{ github.workspace }}/deploy/
 
       - name: Configura GitHub Pages
         uses: actions/configure-pages@v3
