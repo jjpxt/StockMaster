@@ -16,19 +16,22 @@ jobs:
       - name: Clona o repositório
         uses: actions/checkout@v4
 
-      - name: Verifica estrutura do repositório
+      - name: Verifica estrutura
         run: ls -R ${{ github.workspace }}
 
       - name: Cria pasta de build
         run: |
           mkdir ${{ github.workspace }}/deploy
-          cp -r ${{ github.workspace }}/docs/HomePage/* ${{ github.workspace }}/deploy/
-          cp -r ${{ github.workspace }}/docs/Global ${{ github.workspace }}/deploy/
+          cp -r ${{ github.workspace }}/HomePage/* ${{ github.workspace }}/deploy/
+          cp -r ${{ github.workspace }}/Global ${{ github.workspace }}/deploy/
+
+      - name: Sobe build como artefato
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: deploy
 
       - name: Configura GitHub Pages
         uses: actions/configure-pages@v3
 
       - name: Faz deploy para Pages
         uses: actions/deploy-pages@v4
-        with:
-          folder: deploy
