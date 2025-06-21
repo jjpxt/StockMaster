@@ -16,6 +16,9 @@ jobs:
       - name: Clona o repositório
         uses: actions/checkout@v4
 
+      - name: Verifica estrutura do repositório
+        run: ls -R
+
       - name: Cria pasta de build
         run: |
           mkdir deploy
